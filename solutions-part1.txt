@@ -1,0 +1,30 @@
+1. Query a list of courses
+query firstQuery {
+  courses {
+    edges {
+      node {
+        id
+      }
+    }
+  }
+}
+
+2. Query a single course by id
+3. Query a single course by $id (id is a variable)
+query firstQuery($id:ID!){
+  course(id:$id) {
+    id
+  }
+}
+
+{
+  "id": "591b1077ce131d791b3ae9fa"
+}
+4. How many courses in the system?
+query {
+  courses{
+    totalCount
+  }
+}
+
+5. How many currencies in the system?
